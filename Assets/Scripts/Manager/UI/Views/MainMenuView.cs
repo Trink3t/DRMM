@@ -30,7 +30,7 @@ public class MainMenuView : View
         moduleButton.onClick.AddListener(
             ()=> 
             {
-                
+                ViewManager.Show<ModulesView>();
             }
         );
         statsButton.onClick.AddListener(

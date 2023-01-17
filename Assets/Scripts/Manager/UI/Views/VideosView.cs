@@ -28,7 +28,7 @@ public class VideosView : View
         moduleButton.onClick.AddListener(
             ()=> 
             {
-                
+                ViewManager.Show<ModulesView>();
             }
         );
         statsButton.onClick.AddListener(
