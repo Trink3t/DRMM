@@ -8,16 +8,32 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject levelCompletedScreen;
     [SerializeField] private Transform starsContainers;
+    [SerializeField] private GameObject wrongIcon;
+    [SerializeField] private GameObject correctIcon;
 
-    List<GameObject> stars;
-    int NumberOfStars;
-    int CurrentNumberOfStars;
+    List<Transform> stars;
+
+    int TotalStars;
+
+    bool levelNotCompleted;
 
     float time;
     void Start()
     {
         levelCompletedScreen.SetActive(false);
-        NumberOfStars = 3;
+        stars = GetChildren(starsContainers);
+
+        wrongIcon.SetActive(false);
+        correctIcon.SetActive(false);
+
+        levelNotCompleted = true;
+    }
+    void Update()
+    {
+        if (levelNotCompleted)
+        {
+            CheckTime();
+        }  
     }
     public void ReturnToMainMenu()
     {
@@ -34,17 +50,40 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ShowLevelCompleted()
-    {
+    
 
+    public IEnumerator ShowResult(bool isCorrect)
+    {
+        levelNotCompleted = false;
+        if (isCorrect)
+        {
+            correctIcon.SetActive(true);
+            yield return new WaitForSeconds(3);
+            correctIcon.SetActive(false);
+            levelCompletedScreen.SetActive(true);
+        }
+        else
+        {
+            wrongIcon.SetActive(true);
+            yield return new WaitForSeconds(3);
+            wrongIcon.SetActive(false);
+        }
     }
 
-    void Update()
-    {
-        CheckTime();
 
-        
+
+    void CountStars()
+    {
+        for (int i = 0; i < stars.Count; i++)
+        {
+            if (stars[i].gameObject.activeInHierarchy)
+            {
+                TotalStars += 1;
+                //Debug.Log(TotalStars);
+            }
+        }
     }
+
 
     void CheckTime()
     {
@@ -61,10 +100,7 @@ public class GameManager : MonoBehaviour
 
     void DeductStars(int index)
     {
-        List<Transform> stars = GetChildren(starsContainers);
-
         stars[index].gameObject.SetActive(false);
-        
     }
 
     List<Transform> GetChildren(Transform parent)
