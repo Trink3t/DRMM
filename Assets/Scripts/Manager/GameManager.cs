@@ -58,14 +58,14 @@ public class GameManager : MonoBehaviour
         if (isCorrect)
         {
             correctIcon.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
             correctIcon.SetActive(false);
             levelCompletedScreen.SetActive(true);
         }
         else
         {
             wrongIcon.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
             wrongIcon.SetActive(false);
         }
     }
