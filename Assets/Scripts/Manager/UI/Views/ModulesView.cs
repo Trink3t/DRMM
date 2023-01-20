@@ -34,7 +34,7 @@ public class ModulesView : View
         statsButton.onClick.AddListener(
             ()=> 
             {
-                
+                ViewManager.Show<StatsView>();
             }
         );
     }

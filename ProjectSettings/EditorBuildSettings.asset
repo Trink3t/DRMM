@@ -5,7 +5,32 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Welcome.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4f1f388ab08103e49a48bc5acad46e6b
+  - enabled: 1
+    path: Assets/Scenes/Earthquake/2 After.unity
+    guid: d43c570fb01cb20459bf5ab35c1ba9f4
+  - enabled: 1
+    path: Assets/Scenes/Earthquake/2 Before.unity
+    guid: fd70e6f4576a34b4e93c12e9ec74e283
+  - enabled: 1
+    path: Assets/Scenes/Earthquake/2 During.unity
+    guid: 61e97d4d89daa5f40a221c16ee8f4187
+  - enabled: 1
+    path: Assets/Scenes/Fire/1 During.unity
+    guid: c8219067591a3704e805ac1bd7563b99
+  - enabled: 1
+    path: Assets/Scenes/Fire/1 Before.unity
+    guid: 09d70f8b87b25bf489c20f839e60feb2
+  - enabled: 1
+    path: Assets/Scenes/Fire/1 After.unity
+    guid: 63cfca382f30430459f56f5d27799677
+  - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: a67fe972e528dd34d8882b9608a5d51e
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 61e0f13942ec80e4fa36d84e728f3627, type: 2}

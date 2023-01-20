@@ -9,6 +9,7 @@ public class MainMenuView : View
 
     public override void Init()
     {
+        PlayerDataManager.GetInstance().LoadGame();
         quitButton.onClick.AddListener(
             ()=> 
             {
@@ -36,7 +37,7 @@ public class MainMenuView : View
         statsButton.onClick.AddListener(
             ()=> 
             {
-                
+                ViewManager.Show<StatsView>();
             }
         );
     }
