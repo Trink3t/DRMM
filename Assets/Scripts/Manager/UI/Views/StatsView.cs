@@ -13,7 +13,7 @@ public class StatsView : View
     {
         nameText.text = PlayerDataManager.GetInstance().playerData.name;
         gradeLevelText.text = PlayerDataManager.GetInstance().playerData.gradelevel.ToString();
-        gradeLevelText.text = PlayerDataManager.GetInstance().GetTotalStars().ToString();
+        starsCollectedText.text = PlayerDataManager.GetInstance().GetTotalStars().ToString();
 
         backButton.onClick.AddListener(
             ()=>

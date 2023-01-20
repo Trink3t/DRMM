@@ -46,6 +46,6 @@ public class PlayerDataManager : Singleton<PlayerDataManager>
         {
             totalStars += playerData.levelscompleted[i].stars;
         }
-        return totalStars;
+        return (totalStars == 0) ? 0 : totalStars;
     }
 }
