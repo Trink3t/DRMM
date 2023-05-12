@@ -30,6 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Fire/1 After.unity
     guid: 63cfca382f30430459f56f5d27799677
   - enabled: 1
+    path: Assets/Scenes/Typhoon/3 After.unity
+    guid: 0a0269f3da5bc6340b8c5a6ef8920cdb
+  - enabled: 1
+    path: Assets/Scenes/Typhoon/3 During.unity
+    guid: 2950e9e45ddc53d468058cdf2039b66a
+  - enabled: 1
+    path: Assets/Scenes/Typhoon/3 Before.unity
+    guid: 34ed6d7233aa8cd448bef984b4e5e9e1
+  - enabled: 1
     path: Assets/Scenes/Video.unity
     guid: a67fe972e528dd34d8882b9608a5d51e
   m_configObjects:

@@ -9,6 +9,10 @@ public class VideosView : View
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button moduleButton;
     [SerializeField] private Button statsButton;
+
+    [SerializeField] private Button Video1;
+    [SerializeField] private Button Video2;
+    [SerializeField] private Button Video3;
     public override void Init()
     {
         backButton.onClick.AddListener(
@@ -34,7 +38,28 @@ public class VideosView : View
         statsButton.onClick.AddListener(
             ()=> 
             {
-                
+                ViewManager.Show<StatsView>();
+            }
+        );
+
+
+        Video1.onClick.AddListener(
+            ()=>
+            {
+                ViewManager.Show<VideoView1>();
+            }
+        );
+
+        Video2.onClick.AddListener(
+            ()=>
+            {
+                ViewManager.Show<VideoView2>();
+            }
+        );
+        Video3.onClick.AddListener(
+            ()=>
+            {
+                ViewManager.Show<VideoView3>();
             }
         );
     }
