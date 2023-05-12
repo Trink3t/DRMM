@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+
+using UnityEngine.Serialization;
 using System.IO;
 
 public class PlayerDataManager : Singleton<PlayerDataManager>
